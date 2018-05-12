@@ -1,6 +1,15 @@
 # CarND-Path-Planning-Project
 Self-Driving Car Engineer Nanodegree Program
-   
+
+### Overview
+In this project, a path planning algorithm is implemented to drive the vehicle in a virtual track in a simulator. The simulator provided the car's position and velocity as well as the information about the rest of the car's position and velocity present on the track. We need to navigate the car around the track avoiding collision with other cars on the track by changing lanes and minimising jerk.
+
+### Implementation Details
+
+The simulator requires a set of points for generating the trajectory of the car. For this I have used spline function to generate equally spaced points at 0.02 seconds interval for the car to follow. 
+The car starts accelerating slowly from the start to reach up to the velocity of 50 MPH. 
+To avoid collision with other cars in the lane, the car changes lane to left or right depending on whether the track is clear or not. For this, the car checks whether there is no other vehicle in the adjacent lane close to the current car position and also if  there is no possibility of collision at a future position of the car. 
+
 ### Simulator.
 You can download the Term3 Simulator which contains the Path Planning Project from the [releases tab (https://github.com/udacity/self-driving-car-sim/releases/tag/T3_v1.2).
 
